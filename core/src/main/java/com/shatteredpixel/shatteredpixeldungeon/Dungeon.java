@@ -352,7 +352,7 @@ public class Dungeon {
 					level = new HallsLevel();
 					break;
 				case 28:
-				    level = new EndLevel();
+				    level = new LastLevel();
 			    	break;
 				default:
 					level = new DeadEndLevel();
@@ -450,7 +450,7 @@ public class Dungeon {
 	//is usually the dungeon depth, but can be set to 26 when ascending
 	public static int scalingDepth(){
 		if (Dungeon.hero != null && Dungeon.hero.buff(AscensionChallenge.class) != null){
-			return 26;
+			return 28;
 		} else {
 			return depth;
 		}
