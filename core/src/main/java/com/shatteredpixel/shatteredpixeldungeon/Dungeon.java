@@ -264,8 +264,8 @@ public class Dungeon {
 		branch = 0;
 		generatedLevels.clear();
 
-		gold = 0;
-		energy = 0;
+		gold = 9999999;
+		energy = 9999999;
 
 		droppedItems = new SparseArray<>();
 
@@ -348,8 +348,12 @@ public class Dungeon {
 					level = new HallsBossLevel();
 					break;
 				case 26:
-					level = new LastLevel();
+				case 27:
+					level = new HallsLevel();
 					break;
+				case 28:
+				    level = new EndLevel();
+			    	break;
 				default:
 					level = new DeadEndLevel();
 			}
