@@ -145,7 +145,7 @@ public abstract class Level implements Bundlable {
 	protected int height;
 	protected int length;
 	
-	protected static final float TIME_TO_RESPAWN	= 50;
+	protected static final float TIME_TO_RESPAWN	= 20;
 
 	public int version;
 	
@@ -768,7 +768,7 @@ public abstract class Level implements Bundlable {
 		int count = 0;
 		do {
 
-			if (++count > 30) {
+			if (++count > 50) {
 				return -1;
 			}
 
