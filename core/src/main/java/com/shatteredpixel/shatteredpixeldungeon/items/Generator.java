@@ -219,16 +219,16 @@ import java.util.LinkedHashMap;
 public class Generator {
 
 	public enum Category {
-		TRINKET ( 0, 0, Trinket.class),
+		TRINKET ( 1, 0, Trinket.class),
 
-		WEAPON	( 2, 2, MeleeWeapon.class),
+		WEAPON	( 20, 2, MeleeWeapon.class),
 		WEP_T1	( 0, 0, MeleeWeapon.class),
 		WEP_T2	( 0, 0, MeleeWeapon.class),
 		WEP_T3	( 0, 0, MeleeWeapon.class),
 		WEP_T4	( 0, 0, MeleeWeapon.class),
-		WEP_T5	( 0, 0, MeleeWeapon.class),
+		WEP_T5	( 10, 0, MeleeWeapon.class),
 		
-		ARMOR	( 2, 1, Armor.class ),
+		ARMOR	( 20, 1, Armor.class ),
 		
 		MISSILE ( 1, 2, MissileWeapon.class ),
 		MIS_T1  ( 0, 0, MissileWeapon.class ),
@@ -237,16 +237,16 @@ public class Generator {
 		MIS_T4  ( 0, 0, MissileWeapon.class ),
 		MIS_T5  ( 0, 0, MissileWeapon.class ),
 		
-		WAND	( 1, 1, Wand.class ),
+		WAND	( 10, 10, Wand.class ),
 		RING	( 1, 0, Ring.class ),
 		ARTIFACT( 0, 1, Artifact.class),
 		
-		FOOD	( 0, 0, Food.class ),
+		FOOD	( 50, 0, Food.class ),
 		
 		POTION	( 8, 8, Potion.class ),
 		SEED	( 1, 1, Plant.Seed.class ),
 		
-		SCROLL	( 8, 8, Scroll.class ),
+		SCROLL	( 80, 8, Scroll.class ),
 		STONE   ( 1, 1, Runestone.class),
 		
 		GOLD	( 10, 10,   Gold.class );
@@ -339,8 +339,8 @@ public class Generator {
 					PotionOfParalyticGas.class,
 					PotionOfPurity.class,
 					PotionOfExperience.class};
-			POTION.defaultProbs  = new float[]{ 0, 3, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 };
-			POTION.defaultProbs2 = new float[]{ 0, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 0 };
+			POTION.defaultProbs  = new float[]{ 5, 3, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 };
+			POTION.defaultProbs2 = new float[]{ 5, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 0 };
 			POTION.probs = POTION.defaultProbs.clone();
 			
 			SEED.classes = new Class<?>[]{
@@ -373,8 +373,8 @@ public class Generator {
 					ScrollOfTerror.class,
 					ScrollOfTransmutation.class
 			};
-			SCROLL.defaultProbs  = new float[]{ 0, 3, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 };
-			SCROLL.defaultProbs2 = new float[]{ 0, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 0 };
+			SCROLL.defaultProbs  = new float[]{ 5, 3, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 };
+			SCROLL.defaultProbs2 = new float[]{ 5, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 0 };
 			SCROLL.probs = SCROLL.defaultProbs.clone();
 			
 			STONE.classes = new Class<?>[]{
