@@ -31,10 +31,10 @@ public class Gloves extends MeleeWeapon {
 	{
 		image = ItemSpriteSheet.GLOVES;
 		hitSound = Assets.Sounds.HIT;
-		hitSoundPitch = 1.3f;
+		hitSoundPitch = 1.9f;
 
 		tier = 1;
-		DLY = 0.5f; //2x speed
+		DLY = 0.2f; //5x speed
 		
 		bones = false;
 	}
@@ -59,7 +59,7 @@ public class Gloves extends MeleeWeapon {
 
 	@Override
 	public String abilityInfo() {
-		int dmgBoost = levelKnown ? 3 + buffedLvl() : 3;
+		int dmgBoost = levelKnown ? 50 + buffedLvl() : 3;
 		if (levelKnown){
 			return Messages.get(this, "ability_desc", augment.damageFactor(dmgBoost));
 		} else {
@@ -68,7 +68,7 @@ public class Gloves extends MeleeWeapon {
 	}
 
 	public String upgradeAbilityStat(int level){
-		return "+" + augment.damageFactor(3 + level);
+		return "+" + augment.damageFactor(50 + level);
 	}
 
 }
