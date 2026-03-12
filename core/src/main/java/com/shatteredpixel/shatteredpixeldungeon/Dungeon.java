@@ -234,7 +234,7 @@ public class Dungeon {
 
 		initialVersion = version = Game.versionCode;
 		challenges = SPDSettings.challenges();
-		mobsToChampion = 1;
+		mobsToChampion = 0;
 
 		Actor.clear();
 		Actor.resetNextID();
@@ -342,14 +342,13 @@ public class Dungeon {
 				case 22:
 				case 23:
 				case 24:
-				case 25:
-				case 26:
+				case 25
 					level = new HallsLevel();
 					break;
-				case 27:
+				case 26:
 					level = new HallsBossLevel();
 					break;
-				case 28:
+				case 27:
 				    level = new LastLevel();
 			    	break;
 				default:
@@ -441,7 +440,7 @@ public class Dungeon {
 	}
 	
 	public static boolean bossLevel( int depth ) {
-		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 25;
+		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 26;
 	}
 
 	//value used for scaling of damage values and other effects.
@@ -787,7 +786,7 @@ public class Dungeon {
 			}
 
 			droppedItems = new SparseArray<>();
-			for (int i=1; i <= 26; i++) {
+			for (int i=1; i <= 28; i++) {
 
 				//dropped items
 				ArrayList<Item> items = new ArrayList<>();
@@ -897,7 +896,7 @@ public class Dungeon {
 
 	//default to recomputing based on max hero vision, in case vision just shrank/grew
 	public static void observe(){
-		int dist = Math.max(Dungeon.hero.viewDistance, 8);
+		int dist = Math.max(Dungeon.hero.viewDistance, 15);
 		dist *= 1f + 0.25f*Dungeon.hero.pointsInTalent(Talent.FARSIGHT);
 
 		if (Dungeon.hero.buff(MagicalSight.class) != null){
