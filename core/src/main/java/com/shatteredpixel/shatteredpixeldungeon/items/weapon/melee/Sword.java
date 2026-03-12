@@ -70,7 +70,7 @@ public class Sword extends MeleeWeapon {
 
 	@Override
 	public String abilityInfo() {
-		int dmgBoost = levelKnown ? 5 + buffedLvl() : 5;
+		int dmgBoost = levelKnown ? 50 + buffedLvl() : 5;
 		if (levelKnown){
 			return Messages.get(this, "ability_desc", augment.damageFactor(min()+dmgBoost), augment.damageFactor(max()+dmgBoost));
 		} else {
@@ -79,7 +79,7 @@ public class Sword extends MeleeWeapon {
 	}
 
 	public String upgradeAbilityStat(int level){
-		int dmgBoost = 5 + level;
+		int dmgBoost = 50 + level;
 		return augment.damageFactor(min(level)+dmgBoost) + "-" + augment.damageFactor(max(level)+dmgBoost);
 	}
 
