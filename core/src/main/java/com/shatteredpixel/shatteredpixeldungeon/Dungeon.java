@@ -342,7 +342,7 @@ public class Dungeon {
 				case 22:
 				case 23:
 				case 24:
-				case 25
+				case 25:
 					level = new HallsLevel();
 					break;
 				case 26:
