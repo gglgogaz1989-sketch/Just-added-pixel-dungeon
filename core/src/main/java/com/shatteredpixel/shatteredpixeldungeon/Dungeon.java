@@ -342,14 +342,12 @@ public class Dungeon {
 				case 22:
 				case 23:
 				case 24:
+				case 26:
+				case 27:
 					level = new HallsLevel();
 					break;
 				case 25:
 					level = new HallsBossLevel();
-					break;
-				case 26:
-				case 27:
-					level = new HallsLevel();
 					break;
 				case 28:
 				    level = new LastLevel();
@@ -435,7 +433,7 @@ public class Dungeon {
 	}
 	
 	public static boolean shopOnLevel() {
-		return depth == 6 || depth == 11 || depth == 16;
+		return depth == 1 || return depth == 6 || depth == 11 || depth == 16;
 	}
 	
 	public static boolean bossLevel() {
