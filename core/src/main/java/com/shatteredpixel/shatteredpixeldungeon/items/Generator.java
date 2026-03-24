@@ -246,7 +246,7 @@ public class Generator {
 		POTION	( 8, 8, Potion.class ),
 		SEED	( 1, 1, Plant.Seed.class ),
 		
-		SCROLL	( 80, 8, Scroll.class ),
+		SCROLL	( 800, 8, Scroll.class ),
 		STONE   ( 1, 1, Runestone.class),
 		
 		GOLD	( 10, 10,   Gold.class );
@@ -373,8 +373,8 @@ public class Generator {
 					ScrollOfTerror.class,
 					ScrollOfTransmutation.class
 			};
-			SCROLL.defaultProbs  = new float[]{ 5, 3, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 };
-			SCROLL.defaultProbs2 = new float[]{ 5, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 0 };
+			SCROLL.defaultProbs  = new float[]{ 9, 3, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1 };
+			SCROLL.defaultProbs2 = new float[]{ 9, 3, 2, 2, 1, 2, 1, 1, 1, 1, 1, 0 };
 			SCROLL.probs = SCROLL.defaultProbs.clone();
 			
 			STONE.classes = new Class<?>[]{
