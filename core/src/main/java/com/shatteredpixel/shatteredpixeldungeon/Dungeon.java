@@ -342,13 +342,12 @@ public class Dungeon {
 				case 22:
 				case 23:
 				case 24:
-				case 25:
 					level = new HallsLevel();
 					break;
-				case 26:
+				case 25:
 					level = new HallsBossLevel();
 					break;
-				case 27:
+				case 26:
 				    level = new LastLevel();
 			    	break;
 				default:
